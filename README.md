@@ -1,2 +1,2 @@
-# fftulu.github.io
+# ftulu.github.io
 Personal Webpage
