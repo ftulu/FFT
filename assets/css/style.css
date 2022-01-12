@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Tinos&display=swap');
+
+html {
+  background-color: whitesmoke;
+  font-weight: normal;
+  }
+
+body {
+  font-size: 11.5pt;
+  line-height: 1.55em;
+  background: whitesmoke;
+  max-width: 1100px;
+  min-width: 700px;
+  /**margin:auto;*/ 
+  /* font-family: 'Roboto', sans-serif; */
+  font-family: 'Merriweather', serif;
+}
+
+.Header {
+  display: flex;
+  font-family: 'Tinos', serif;
+  justify-content: space-evenly;
+  margin: 2rem 2rem 0 2rem;
+  align-items: baseline;
+  line-height: 2.5em;
+  font-size: 14pt;
+  border-bottom: 0.1px solid black;
+  padding-bottom: 0.3rem;
+}
+
+.Header2 {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 100;
+    font-size: 89px;
+    justify-content: space-evenly;
+    align-items: baseline;
+    align-self: baseline;
+    text-align:center;
+    padding:10px;
+  
+    
+}
+
+
+.Header-Name {
+  margin: bottom;
+  font-size: 30pt;
+  text-align: center;
+  text-decoration: auto;
+  color: black;
+  flex: 5;
+}
+
+.Header-Name:hover {
+  color: #3F3CC2;
+  transition: color 0.25s;
+}
+
+.Header-Navigation {
+  margin: bottom;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  flex: 9;
+}
+
+.Header-Navigation > a {
+  text-decoration: none;
+  color: black;
+}
+
+.Header-Navigation > a:hover {
+  color: #3F3CC2;
+  transition: color 0.25s;
+}
+
+.Header-Social {
+  
+  display: flex;
+  flex-wrap: wrap;
+  flex: 2.2;
+  font-size: 8px;
+  justify-content: space-evenly;
+  align-items: baseline;
+  align-self: baseline;
+}
+
+.Content {
+    
+  margin: 2rem 2rem 5rem 2rem;
+}
+
+.Photo {
+  border: black 1px;
+  width: 320px;
+  border: 1px solid black;
+  margin-top: 0.4em;
+  overflow: auto;
+ }
+ 
+
+.two-column {
+  display: grid;
+  margin: auto;
+  grid-template-columns: 1fr 2fr;
+  gap: 1rem;
+}
+
+.project-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 1px;
+}
+
+a {
+  text-decoration: none;
+  font-weight: normal;
+  color: #3F3CC2;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+ .face-icon, .twitter-icon, .insta-icon, .linkedin-icon, .steam-icon, .mail-icon {
+  width: 36px;
+  color: black;
+  margin-top: 10px;
+  margin-bottom: -3.2px;
+  
+}
+
+.bio {
+  margin-right: 2rem;
+}
+
+.postTitle {
+  font-size: 24px;
+  color: black;
+}
+
+.postTitle:hover {
+  font-weight: bolder;
+}
+
+.continueLink {
+  font-size: 20px;
+  color: black;
+}
+
+.continueLink:hover {
+  font-weight: bolder;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.postInfo {
+  font-size: 16px;
+}
+
+.post {
+  margin-bottom: 3em;
+}
+
+.drawingBox {
+  margin: 2.5em 2.5em 0em 0em;
+}
+
+.drawing {
+  max-width: 265px;
+}
+
+.drawings {
+  display: flex;
+  flex-wrap: wrap;
+}
