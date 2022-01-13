@@ -167,15 +167,15 @@ ul {
   margin-bottom: 3em;
 }
 
-.drawingBox {
+.hobbieBox {
   margin: 2.5em 2.5em 0em 0em;
 }
 
-.drawing {
+.hobbie {
   max-width: 265px;
 }
 
-.drawings {
+.hobbies {
   display: flex;
   flex-wrap: wrap;
 }
