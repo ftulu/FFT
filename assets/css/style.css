@@ -168,13 +168,18 @@ ul {
 }
 
 .hobbieBox {
+  width: 265px;
+  height: 265px;
   margin: 2.5em 2.5em 0em 0em;
+  overflow: hidden;
 }
 
 .hobbie {
-  max-width: 265px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
-
 .hobbies {
   display: flex;
   flex-wrap: wrap;
