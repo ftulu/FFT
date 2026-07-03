@@ -4,7 +4,7 @@
 html {
   background-color: whitesmoke;
   font-weight: normal;
-  }
+}
 
 body {
   font-size: 11.5pt;
@@ -12,8 +12,6 @@ body {
   background: whitesmoke;
   max-width: 1100px;
   min-width: 700px;
-  /**margin:auto;*/ 
-  /* font-family: 'Roboto', sans-serif; */
   font-family: 'Merriweather', serif;
 }
 
@@ -30,25 +28,21 @@ body {
 }
 
 .Header2 {
-    display: flex;
-    flex-wrap: wrap;
-    flex: 100;
-    font-size: 89px;
-    justify-content: space-evenly;
-    align-items: baseline;
-    align-self: baseline;
-    text-align:center;
-    padding:10px;
-  
-    
+  display: flex;
+  flex-wrap: wrap;
+  flex: 100;
+  font-size: 89px;
+  justify-content: space-evenly;
+  align-items: baseline;
+  align-self: baseline;
+  text-align: center;
+  padding: 10px;
 }
 
-
 .Header-Name {
-  margin: bottom;
   font-size: 30pt;
   text-align: center;
-  text-decoration: auto;
+  text-decoration: none;
   color: black;
   flex: 5;
 }
@@ -59,7 +53,6 @@ body {
 }
 
 .Header-Navigation {
-  margin: bottom;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -77,7 +70,6 @@ body {
 }
 
 .Header-Social {
-  
   display: flex;
   flex-wrap: wrap;
   flex: 2.2;
@@ -88,18 +80,15 @@ body {
 }
 
 .Content {
-    
   margin: 2rem 2rem 5rem 2rem;
 }
 
 .Photo {
-  border: black 1px;
   width: 320px;
   border: 1px solid black;
   margin-top: 0.4em;
   overflow: auto;
- }
- 
+}
 
 .two-column {
   display: grid;
@@ -124,12 +113,16 @@ a {
   text-decoration: underline;
 }
 
- .face-icon, .twitter-icon, .insta-icon, .linkedin-icon, .steam-icon, .mail-icon {
+.face-icon,
+.twitter-icon,
+.insta-icon,
+.linkedin-icon,
+.steam-icon,
+.mail-icon {
   width: 36px;
   color: black;
   margin-top: 10px;
   margin-bottom: -3.2px;
-  
 }
 
 .bio {
@@ -155,7 +148,7 @@ a {
 }
 
 ul {
-  list-style-type: none;
+  list-style: none;
   padding: 0;
 }
 
@@ -167,11 +160,27 @@ ul {
   margin-bottom: 3em;
 }
 
+/* ===========================
+   HOBBIES GALLERY
+   =========================== */
+
+.hobbies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 0;
+  margin-top: 25px;
+}
+
+.hobbies li {
+  list-style: none;
+}
+
 .hobbieBox {
   width: 265px;
   height: 265px;
-  margin: 2.5em 2.5em 0em 0em;
   overflow: hidden;
+  border-radius: 6px;
 }
 
 .hobbie {
@@ -179,8 +188,9 @@ ul {
   height: 100%;
   object-fit: cover;
   display: block;
+  transition: transform .3s ease;
 }
-.hobbies {
-  display: flex;
-  flex-wrap: wrap;
+
+.hobbie:hover {
+  transform: scale(1.05);
 }
