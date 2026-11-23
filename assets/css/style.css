@@ -1,55 +1,91 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Tinos&display=swap');
+/* Fonts are loaded via <link> in _layouts/default.html */
+
+:root {
+  --bg: whitesmoke;
+  --text: #111;
+  --muted: #555;
+  --accent: #3F3CC2;
+  --border: #000;
+}
+
+* {
+  box-sizing: border-box;
+}
 
 html {
-  background-color: whitesmoke;
-  font-weight: normal;
+  background-color: var(--bg);
 }
 
 body {
   font-size: 11.5pt;
   line-height: 1.55em;
-  background: whitesmoke;
+  background: var(--bg);
+  color: var(--text);
   max-width: 1100px;
-  min-width: 700px;
+  margin: 0 auto;
+  padding: 0 16px;
   font-family: 'Merriweather', serif;
+  font-weight: 300;
 }
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  font-weight: normal;
+  color: var(--accent);
+}
+
+a:hover,
+a:focus-visible {
+  text-decoration: underline;
+}
+
+strong,
+b {
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 1.5em;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ===========================
+   HEADER
+   =========================== */
 
 .Header {
   display: flex;
   font-family: 'Tinos', serif;
   justify-content: space-evenly;
-  margin: 2rem 2rem 0 2rem;
   align-items: baseline;
+  margin: 2rem 2rem 0 2rem;
   line-height: 2.5em;
   font-size: 14pt;
-  border-bottom: 0.1px solid black;
+  border-bottom: 1px solid var(--border);
   padding-bottom: 0.3rem;
-}
-
-.Header2 {
-  display: flex;
-  flex-wrap: wrap;
-  flex: 100;
-  font-size: 89px;
-  justify-content: space-evenly;
-  align-items: baseline;
-  align-self: baseline;
-  text-align: center;
-  padding: 10px;
 }
 
 .Header-Name {
   font-size: 30pt;
   text-align: center;
-  text-decoration: none;
   color: black;
   flex: 5;
-}
-
-.Header-Name:hover {
-  color: #3F3CC2;
-  transition: color 0.25s;
 }
 
 .Header-Navigation {
@@ -57,107 +93,96 @@ body {
   flex-wrap: wrap;
   justify-content: space-around;
   flex: 9;
+  gap: 0 1rem;
 }
 
 .Header-Navigation > a {
-  text-decoration: none;
   color: black;
 }
 
-.Header-Navigation > a:hover {
-  color: #3F3CC2;
+.Header-Name:hover,
+.Header-Navigation > a:hover,
+.Header-Navigation > a[aria-current="page"] {
+  color: var(--accent);
+  text-decoration: none;
   transition: color 0.25s;
 }
 
-.Header-Social {
-  display: flex;
-  flex-wrap: wrap;
-  flex: 2.2;
-  font-size: 8px;
-  justify-content: space-evenly;
-  align-items: baseline;
-  align-self: baseline;
+.Header-Navigation > a[aria-current="page"] {
+  border-bottom: 2px solid var(--accent);
 }
+
+/* ===========================
+   CONTENT
+   =========================== */
 
 .Content {
-  margin: 2rem 2rem 5rem 2rem;
-}
-
-.Photo {
-  width: 320px;
-  border: 1px solid black;
-  margin-top: 0.4em;
-  overflow: auto;
+  display: block;
+  margin: 2rem 2rem 3rem 2rem;
 }
 
 .two-column {
   display: grid;
-  margin: auto;
   grid-template-columns: 1fr 2fr;
-  gap: 1rem;
+  gap: 2rem;
+  align-items: start;
+}
+
+.Photo {
+  width: 320px;
+  max-width: 100%;
+  border: 1px solid black;
+  margin-top: 1em;
+}
+
+/* ===========================
+   PROJECTS
+   =========================== */
+
+.project {
+  margin-bottom: 2.5rem;
+}
+
+.project p {
+  margin: 0.5rem 0;
 }
 
 .project-title {
   font-size: 18px;
   font-weight: bold;
-  margin-bottom: 1px;
+  margin: 0 0 0.25rem 0;
 }
 
-a {
-  text-decoration: none;
-  font-weight: normal;
-  color: #3F3CC2;
+.project-collab {
+  color: var(--muted);
+  font-style: italic;
 }
 
-.underline {
-  text-decoration: underline;
+.project-links a {
+  margin-right: 1.25rem;
+  white-space: nowrap;
 }
 
-.face-icon,
-.twitter-icon,
-.insta-icon,
-.linkedin-icon,
-.steam-icon,
-.mail-icon {
-  width: 36px;
-  color: black;
-  margin-top: 10px;
-  margin-bottom: -3.2px;
-}
-
-.bio {
-  margin-right: 2rem;
-}
-
-.postTitle {
-  font-size: 24px;
-  color: black;
-}
-
-.postTitle:hover {
-  font-weight: bolder;
-}
-
-.continueLink {
-  font-size: 20px;
-  color: black;
-}
-
-.continueLink:hover {
-  font-weight: bolder;
-}
+/* ===========================
+   READING / WATCHING
+   =========================== */
 
 ul {
   list-style: none;
   padding: 0;
 }
 
-.postInfo {
-  font-size: 16px;
+.year {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 1rem;
 }
 
-.post {
-  margin-bottom: 3em;
+.year:last-of-type {
+  border-bottom: 0;
+}
+
+.media-list {
+  margin: 0;
 }
 
 /* ===========================
@@ -165,20 +190,18 @@ ul {
    =========================== */
 
 .hobbies {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   gap: 30px;
-  padding: 0;
   margin-top: 25px;
 }
 
-.hobbies li {
-  list-style: none;
+.hobbies figure {
+  margin: 0;
 }
 
 .hobbieBox {
-  width: 265px;
-  height: 265px;
+  aspect-ratio: 1 / 1;
   overflow: hidden;
   border-radius: 6px;
 }
@@ -193,4 +216,87 @@ ul {
 
 .hobbie:hover {
   transform: scale(1.05);
+}
+
+.hobbies figcaption {
+  font-size: 0.85em;
+  line-height: 1.4em;
+  color: var(--muted);
+  margin-top: 0.5rem;
+}
+
+/* ===========================
+   FOOTER
+   =========================== */
+
+.Footer {
+  border-top: 1px solid var(--border);
+  margin: 0 2rem 2rem 2rem;
+  padding: 10px;
+}
+
+.Footer-Social {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 1rem;
+}
+
+.social-icon {
+  display: block;
+  width: 36px;
+  height: 36px;
+  margin-top: 10px;
+  transition: transform 0.2s;
+}
+
+.Footer-Social a:hover .social-icon,
+.Footer-Social a:focus-visible .social-icon {
+  transform: scale(1.12);
+}
+
+/* ===========================
+   MOBILE
+   =========================== */
+
+@media (max-width: 760px) {
+  .Header {
+    flex-direction: column;
+    align-items: center;
+    margin: 1.25rem 0 0 0;
+    line-height: 2em;
+  }
+
+  .Header-Name {
+    font-size: 22pt;
+    line-height: 1.3em;
+  }
+
+  .Header-Navigation {
+    justify-content: center;
+    font-size: 12pt;
+  }
+
+  .Content {
+    margin: 1.5rem 0 2rem 0;
+  }
+
+  .two-column {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .Photo {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .hobbies {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 16px;
+  }
+
+  .Footer {
+    margin: 0 0 1.5rem 0;
+  }
 }

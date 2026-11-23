@@ -1,0 +1,9 @@
+<header class="Header">
+  <a class="Header-Name" href="./index.html">Fethi Fırat TÜLÜ</a>
+  <nav class="Header-Navigation" aria-label="Main">
+    <a href="./side-projects.html"{% if page.url == "/side-projects.html" %} aria-current="page"{% endif %}>Projects</a>
+    <a href="./reading.html"{% if page.url == "/reading.html" %} aria-current="page"{% endif %}>Reading/Watching</a>
+    <a href="./hobbies.html"{% if page.url == "/hobbies.html" %} aria-current="page"{% endif %}>Hobbies</a>
+    <a href="./index.html"{% if page.url == "/" or page.url == "/index.html" %} aria-current="page"{% endif %}>About</a>
+  </nav>
+</header>

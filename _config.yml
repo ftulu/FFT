@@ -1,4 +1,7 @@
-name: FFTulu's Personal Website
-collections:
-  drawings:
-    sort-by: date
+title: Fethi Fırat Tülü
+description: Portfolio of Fethi Fırat Tülü, an IT Service Management professional (ServiceNow, ITIL4, Major Incident, Change and Problem Management).
+url: "https://ftulu.github.io"
+baseurl: "/FFT"
+
+exclude:
+  - README.md
